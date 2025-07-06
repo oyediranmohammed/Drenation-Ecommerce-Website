@@ -20,7 +20,7 @@ function AuthLogin() {
             <div className="text-center">
                 <h1 className="text-2xl font-bold tracking-tight text-foreground">Sign in to your Account</h1>
                 <p className='mt-2'>Don't have an account? 
-                    <Link className='text-primary hover:underline ml-2 font-medium' to='/auth/register'>Register</Link>
+                    <Link className='text-primary hover:underline ml-2 font-semibold' to='/auth/register'>Register</Link>
                 </p>
             </div>
             <CommonForm

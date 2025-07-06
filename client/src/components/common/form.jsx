@@ -29,6 +29,7 @@ function CommonForm({formControls, formData, setFormData, onSubmit, buttonText})
                         ...formData,
                         [getControlItem.name] : event.target.value,
                     })}
+                    className={`${value ? 'bg-blue-100' : 'bg-white'} transition-colors duration-300`}
                 />
                 );
 
@@ -97,8 +98,8 @@ function CommonForm({formControls, formData, setFormData, onSubmit, buttonText})
             <div className="flex flex-col gap-3">
                 {
                 
-                formControls.map(controlItem => <div className="grid w-full gap-1.5" key={controlItem.name}>   
-                    <label className="mb-1">{controlItem.label}</label>
+                formControls.map(controlItem => <div className="grid w-full gap-1.5 " key={controlItem.name}>   
+                    <Label className="mb-1 text-primary font-semibold">{controlItem.label}</Label>
                     {
                         renderInputByComponentType(controlItem)
                     }
