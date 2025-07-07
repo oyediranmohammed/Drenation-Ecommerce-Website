@@ -31,10 +31,10 @@ function AuthRegister() {
                     })
                     navigate('/auth/login')
                 }
-            else
+            else 
             {
                 toast({
-                    title: "Email already exist", 
+                    title: "Email already", 
                     variant: 'destructive',
                     description: "Please try again with different credentials.",
                     action: <ToastAction altText="Try again">Try again</ToastAction>,
