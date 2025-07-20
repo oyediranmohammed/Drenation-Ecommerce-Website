@@ -8,7 +8,13 @@ import { Button } from "../ui/button";
 
 
 
-function CommonForm({formControls, formData, setFormData, onSubmit, buttonText}) {
+function CommonForm({
+    formControls, 
+    formData, 
+    setFormData, 
+    onSubmit, 
+    buttonText,
+    isBtnDisabled}) {
 
     function renderInputByComponentType(getControlItem) {
         let element = null;
@@ -107,7 +113,7 @@ function CommonForm({formControls, formData, setFormData, onSubmit, buttonText})
                 )}
 
             </div>
-            <Button className="mt-2 w-full" type="submit">{buttonText || 'Submit'}</Button>
+            <Button disabled={isBtnDisabled} className="mt-2 w-full" type="submit">{buttonText || 'Submit'}</Button>
         </form>
     );
 }

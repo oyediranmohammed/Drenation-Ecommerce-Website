@@ -31,7 +31,7 @@ function App() {
   }, [dispatch]);
 
     if(isLoading)
-      {return <Skeleton className="h-700px w-full bg-slate-400" />};
+      return <Skeleton className="h-[800px] w-full bg-slate-800" />;
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>

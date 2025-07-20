@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import authRouter from './routes/auth/auth-routes.js'
-
+import adminProductsRouter from './routes/admin/products-routes.js' 
 
 
 dotenv.config(); // load environment variables from .env
@@ -30,8 +30,8 @@ app.use(
   })
 );
 
-app.use('/api/auth', authRouter)
-
+app.use('/api/auth', authRouter);
+app.use('/api/admin/products', adminProductsRouter);
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
